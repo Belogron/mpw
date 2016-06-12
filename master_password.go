@@ -32,6 +32,7 @@ type MasterPassword struct {
 	siteName string
 }
 
+// Creates a MasterPassword with the given MasterKey, site and counter. The type has to be set later or default to maximum security
 func GenerateMasterPassword(masterKey *MasterKey, siteName string, counter uint32) *MasterPassword {
 	masterPassword := new(MasterPassword)
 	masterPassword.counter = counter
@@ -40,6 +41,7 @@ func GenerateMasterPassword(masterKey *MasterKey, siteName string, counter uint3
 	return masterPassword
 }
 
+// Creates a MasterPassword with the given MasterKey, site, counter and type.
 func GenerateMasterPasswordWithType(masterKey *MasterKey, siteName string, counter uint32, mpType MasterPasswordType) *MasterPassword {
 	masterPassword := GenerateMasterPassword(masterKey, siteName, counter)
 	masterPassword.masterPasswordType = mpType

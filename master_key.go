@@ -65,6 +65,8 @@ func GenerateMasterKey(userName, masterPassword string) (*MasterKey, error) {
 	return masterKey, nil
 }
 
+// Generates an identicon to help the user check his username/password combination
+// The color code (second parameter) represents standard unix shell color codes (see README on github)
 func GenerateIdenticon(userName, password string) (string, int) {
 
 	hmac := hmac.New(sha256.New, []byte(password))

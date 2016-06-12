@@ -70,6 +70,6 @@ func (t MasterPasswordType) GetTemplates() []string {
 	case PhrasePassword:
 		return []string{"cvcc cvc cvccvcv cvc", "cvc cvccvcvcv cvcv", "cv cvccv cvc cvcvccv" }
 	default:
-		return nil
+		return []string{"anoxxxxxxxxxxxxxxxxx", "axxxxxxxxxxxxxxxxxno"}
 	}
 }
