@@ -97,6 +97,5 @@ func assembleSalt(userName string) *[]byte {
 	copy(salt[lenSaltBeg: lenSaltBeg + 4], bs)
 	// Copy the user name
 	copy(salt[lenSaltBeg + 4:], []byte(userName))
-	fmt.Printf("salt %v\n", salt)
 	return &salt
 }
